@@ -10,15 +10,13 @@
         .hidden {
             display: none;
         }
-
         .dark-mode {
             background-color: #333;
             color: white;
         }
-
         .results-container {
             position: absolute;
-            top: 40px;
+            top: 40px; 
             left: 0;
             right: 0;
             background-color: white;
@@ -28,12 +26,10 @@
             max-height: 300px;
             overflow-y: auto;
         }
-
         .results-item {
             padding: 10px;
             cursor: pointer;
         }
-
         .results-item:hover {
             background-color: #f0f0f0;
         }
@@ -41,78 +37,82 @@
 </head>
 
 <body>
-    <header class="fixed z-50 top-0 w-full bg-white shadow-lg max-h-[80px]">
-        <div
-            class="container px-3 lg:max-w-[1024px] mx-auto flex bg-white/80 max-h-[80px] w-full justify-between items-center">
-            <div class="flex text-slate-900 items-center gap-5">
-                <div class="flex items-center gap-6">
-                    <div class="relative">
-                        <button id="dropdownButton"
-                            class="flex items-center gap-1 text-sm font-medium text-slate-900 leading-[1.3] hover:text-sky-500 transition duration-300 max-sm:uppercase">
-                            <span class="sm:hidden flex items-center gap-[2px]">
-                                <img class="w-6" src="./img/rus.png" alt="rus">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">ru</font>
-                                </font>
-                            </span>
-                            <span class="hidden lg:items-center gap-[2px] sm:inline items-center gap-[2px]">
-                                <img class="w-6" src="./img/rus.png" alt="rus">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">rus</font>
-                                </font>
-                            </span>
-                            <i
-                                class="fas fa-chevron-down text-slate-900 text-2xl -rotate-90 transition duration-300"></i>
-                        </button>
-                        <div id="dropdownMenu"
-                            class="absolute left-0 w-max min-w-full translate-y-full bg-white rounded-lg overflow-hidden -bottom-1 z-10 shadow-lg hidden">
-                            <ul>
-                                <li class="flex items-center gap-2 px-4 cursor-pointer"
-                                    onclick="setLanguage('rus', './img/rus.png', 'ru', 'rus')">
-                                    <img src="./img/rus.png" alt="rus" class="shrink-0 w-6">
-                                    <span
-                                        class="w-full flex items-center gap-[2px] leading-6 py-2 relative hover:text-sky-500 transition duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-[calc(100%+16px)] after:h-px after:bg-gray-400 last:after:hidden max-sm:uppercase">
+    <header class="fixed z-50 top-0 w-[100%] bg-white shadow-lg max-h-[80px]">
+        <div class="container px-3 lg:max-w-[1024px] mx-auto flex bg-white/80 max-h-[80px] w-full justify-between items-center">
+            <div class="flex gap-5">
+
+                <div class="flex text-slate-900 items-center gap-5">
+                    <div class="flex items-center gap-6">
+                        <div class="relative">
+                            <div>
+                                <button id="dropdownButton"
+                                    class="flex items-center gap-1 text-sm font-medium text-slate-900 leading-[1.3] hover:text-sky-500 transition duration-300 max-sm:uppercase">
+                                    <span class="sm:hidden flex items-center gap-[2px]">
+                                        <img class="w-6" src="./img/rus.png" alt="rus">
                                         <font style="vertical-align: inherit;">
                                             <font style="vertical-align: inherit;">ru</font>
                                         </font>
                                     </span>
-                                </li>
-                                <li class="flex items-center gap-2 px-4 cursor-pointer"
-                                    onclick="setLanguage('uzb', './img/uzb.png', 'uz', 'O\'zbekcha')">
-                                    <img src="./img/uzb.png" alt="O'zbekcha" class="shrink-0 w-6">
-                                    <span
-                                        class="w-full flex items-center gap-[2px] leading-6 py-2 relative hover:text-sky-500 transition duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-[calc(100%+16px)] after:h-px after:bg-gray-400 last:after:hidden max-sm:uppercase">
+                                    <span class="hidden lg:items-center gap-[2px] sm:inline items-center gap-[2px]">
+                                        <div>
+                                            <img class="w-6" src="./img/rus.png" alt="rus">
+                                        </div>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">uz</font>
+                                            <font style="vertical-align: inherit;">rus</font>
                                         </font>
                                     </span>
-                                </li>
-                            </ul>
+                                    <i class="fas fa-chevron-down text-slate-900 text-2xl -rotate-90 transition duration-300"></i>
+                                </button>
+                            </div>
+                            <div id="dropdownMenu" class="absolute left-0 w-max min-w-full translate-y-full bg-white rounded-lg overflow-hidden -bottom-1 z-10 shadow-lg hidden">
+                                <ul>
+                                    <li class="flex items-center gap-2 px-4 cursor-pointer"
+                                        onclick="setLanguage('rus', './img/rus.png', 'ru', 'rus')">
+                                        <img src="./img/rus.png" alt="rus" class="shrink-0 w-6">
+                                        <span class="w-full flex items-center gap-[2px] leading-6 py-2 relative hover:text-sky-500 transition duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-[calc(100%+16px)] after:h-px after:bg-gray-400 last:after:hidden max-sm:uppercase">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">ru</font>
+                                            </font>
+                                        </span>
+                                    </li>
+                                    <li class="flex items-center gap-2 px-4 cursor-pointer"
+                                        onclick="setLanguage('uzb', './img/uzb.png', 'uz', 'O\'zbekcha')">
+                                        <img src="./img/uzb.png" alt="O'zbekcha" class="shrink-0 w-6">
+                                        <span class="w-full flex items-center gap-[2px] leading-6 py-2 relative hover:text-sky-500 transition duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-[calc(100%+16px)] after:h-px after:bg-gray-400 last:after:hidden max-sm:uppercase">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">uz</font>
+                                            </font>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="flex items-center gap-2">
-                <img class="hidden lg:block w-6" src="./img/phone.svg" alt="phone">
-                <p class="hidden lg:block lg:font-semibold text-slate-900 hover:text-sky-500">
-                    +998 88 500 50 00
-                </p>
+                <div class="flex items-center gap-2">
+                    <img class=" hidden lg:block w-6" src="./img/phone.svg" alt="phone">
+                    <p class="hidden lg:block lg:font-semibold text-slate-900 hover:text-sky-500">
+                        +998 88 500 50 00
+                    </p>
+                </div>
             </div>
             <div>
                 <a class="px-2 py-2 md:px-4 md:py-[14px] logo" href="./index.html">
-                    <img class="bg-white p-2 md:p-5 shadow-xl rounded-b-xl" src="https://77.uz/images/logo/default.svg"
-                        alt="77.uz">
+                    <img class="bg-white p-2 md:p-5 shadow-xl rounded-b-xl " src="https://77.uz/images/logo/default.svg" alt="77.uz">
                 </a>
             </div>
-            <div class="flex items-center gap-5">
-                <div class="flex items-center gap-2">
-                    <img class="bg-slate-300 w-10 p-2 rounded-lg" src="./img/heart.svg" alt="sevimlilar">
-                    <p class="hidden lg:block font-bold text-slate-900 hover:text-sky-500">
-                        Tanlanganlar
-                    </p>
-                </div>
-                <div class="flex items-center gap-2 rounded-lg bg-slate-300 px-5 py-2">
-                    <button class="hidden lg:block text-slate-900 font-bold">
+            <div class="flex items-center cursor-pointer gap-5">
+                <a href="save.html">
+                    <div href ="product.html" class="save_page flex  items-center cursor-pointer gap-[2px]">
+                        <img class=" bg-slate-300 w-10 p-2 lg:bg-white rounded-lg" src="./img/heart.svg" alt="sevimlilar">
+                        <p class="hidden lg:block font-bold text-slate-900 hover:text-sky-500">
+                            Sevimlilar
+                        </p>
+                    </div>
+                </a>
+                    
+                <div class="flex items-center gap-2 rounded-lg hover:bg-slate-200 bg-slate-300 px-5 py-2">
+                    <button class="hidden lg:block  text-slate-900 font-bold">
                         Kirish uchun
                     </button>
                     <img class="w-5" src="./img/enter.svg" alt="Kirish">
@@ -127,17 +127,15 @@
                     <div id="searchContainer"
                         class="bg-gray-bg border shadow-md border-transparent transition-300 focus-within:border-blue flex items-center rounded-lg p-3 max-w-[580px] bg-white !p-4 !pl-2.5 mx-auto translate-y-1/2 !border-gray-4 focus-within:!border-blue relative z-20">
                         <img class="w-6" src="./img/search.svg" alt="search">
-                        <input id="searchInput"
-                            class="w-full translate-x-4 text-black text-base sm:text-sm leading-5 text-dark bg-transparent outline-none placeholder:text-gray-2 disabled:text-gray"
-                            placeholder="Kerakli maxsulotni izlang" autocomplete="new-password"
-                            style="background-color: transparent;">
+                        <input id="searchInput"class="w-full translate-x-4 text-black text-base sm:text-sm leading-5 text-dark bg-transparent outline-none placeholder:text-gray-2 disabled:text-gray"
+                            placeholder="Kerakli maxsulotni izlang" autocomplete="new-password" style="background-color: transparent;">
                         <img class="w-6 cursor-pointer" id="clearInput" src="./img/exit.svg" alt="exit">
                     </div>
                 </div>
             </div>
             <div id="overlay" style="display:none;"></div>
             <div class="mt-32 results-container" id="resultsContainer">
-                <!-- <img class="mx-auto" src="https://77.uz/images/default/search.svg" alt="stiker"> -->
+                <!-- <img class="mx-auto" src="https://77.uz/images/default/search.svg"alt="stiker"> -->
             </div>
         </div>
         <section>
@@ -153,8 +151,24 @@
                 </div>
             </div>
         </section>
+        
+        <section>
+            <div class="container mx-auto mb-4 bg-slate-100 px-4 max-w-[1024px]:">
+                <div class="max-w-[1024px] mx-auto mt-4">
+                   <h3 class="text-center text-[32px] text-[#16191d] font-bold">
+                       E'lonlar
+                   </h3>
+                </div>
+                 <div class="cards mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 px-2">
+                 </div>
+            </div>
+        </section>
     </main>
+    <footer>
+        <div class="mt-8 pt-14 md:pt-16 pb-3 bg-center bg-cover bg-[url('https://77.uz/images/pattern/footer-small.webp')] md:bg-[url('https://77.uz/images/pattern/footer.webp')] relative">
 
+        </div>
+    </footer>
     <script src="./js/index.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </body>
