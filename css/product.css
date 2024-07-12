@@ -1,0 +1,10 @@
+.indecator_img {
+    transition: transform 0.3s ease; 
+}
+
+.parent-card.clicked .indecator_img {
+    transform: translateY(10px); 
+}
+.rotate-180 {
+    transform: rotate(180deg);
+}
